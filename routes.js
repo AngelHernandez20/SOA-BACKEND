@@ -1,7 +1,7 @@
 const express = require('express')
 const routes = express.Router()
 
-routes.get('/', (req, res)=>{
+routes.get('/getBook', (req, res)=>{
     req.getConnection((err, conn)=>{
         if(err) return res.send(err)
 
@@ -13,7 +13,7 @@ routes.get('/', (req, res)=>{
     })
 })
 
-routes.post('/', (req, res)=>{
+routes.post('/addBook', (req, res)=>{
     req.getConnection((err, conn)=>{
         if(err) return res.send(err)
         conn.query('INSERT INTO books set ?', [req.body], (err, rows)=>{
