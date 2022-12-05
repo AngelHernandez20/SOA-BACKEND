@@ -14,11 +14,11 @@ app.use(cors());
 
 app.set('port', process.env.PORT || 9000)
 const dbOptions = {
-    host: 'localhost',
+    host: '54.205.52.220',
     port: 3306,
     user: 'root',
     password: 'angel',
-    database: 'library'
+    database: 'vitra'
 }
 
 // middlewares -------------------------------------
